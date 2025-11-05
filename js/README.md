@@ -1,11 +1,7 @@
 # To Do (HTML + CSS + JS + LocalStorage)
 
-Aplicativo **To Do simples** (nível graduação) usando **apenas HTML, CSS e JavaScript (ES6+)**, **sem bibliotecas**, **sem servidor** e com **persistência em LocalStorage**.
+Aplicativo **To Do **  usando **apenas HTML, CSS e JavaScript (ES6+)**, **sem bibliotecas**, **sem servidor** e com **persistência em LocalStorage**.
 
-## Como executar
-1. Baixe/cloner este projeto.
-2. Abra o arquivo `index.html` diretamente no navegador (duplo clique ou arraste para uma aba).
-3. Não requer servidor local.
 
 ## Funcionalidades obrigatórias implementadas
 - **Adicionar nova tarefa** (botão *Adicionar* ou tecla **Enter**).
@@ -38,5 +34,5 @@ Aplicativo **To Do simples** (nível graduação) usando **apenas HTML, CSS e Ja
 - **Erro** ao tentar adicionar tarefa vazia (mensagem abaixo do campo).
 
 ## Observações
-- Código pequeno, claro e comentado.
 - Sem frameworks, bundlers ou bibliotecas externas
+
