@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>To Do (LocalStorage)</title>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <header class="app-header">
+      <h1>Lista de Tarefas</h1>
+    </header>
+
+    <main class="app-main" id="main">
+      <!-- Formulário: Enter dispara submit; label acessível -->
+      <form id="task-form" class="task-form" autocomplete="off" novalidate>
+        <label class="sr-only" for="task-input">Descrição da tarefa</label>
+        <input
+          id="task-input"
+          name="task"
+          type="text"
+          placeholder="Descreva a tarefa..."
+          aria-describedby="msg"
+          maxlength="200"
+        />
+        <button type="submit" class="btn-add">Adicionar</button>
+      </form>
+
+      <!-- Mensagem de erro pequena e não intrusiva -->
+      <p id="msg" class="msg" role="status" aria-live="polite"></p>
+
+      <!-- Lista semântica das tarefas -->
+      <section aria-labelledby="list-title" class="task-section">
+        <h2 id="list-title" class="sr-only">Tarefas</h2>
+        <ul id="task-list" class="task-list"></ul>
+      </section>
+    </main>
+
+    <footer class="app-footer">
+      <small>&copy; <span id="year"></span> To Do LocalStorage</small>
+    </footer>
+
+    <script src="js/app.js" defer></script>
+  </body>
+</html>
