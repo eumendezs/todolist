@@ -1,22 +1,16 @@
-/* To Do simples com LocalStorage.
- * Requisitos cobertos:
- * - addTask(text), toggleTask(id), deleteTask(id)
- * - loadTasks(), saveTasks(), renderTasks()
- * - Persistência com localStorage
- * - Acessibilidade básica e feedback imediato
- */
+
 
 (() => {
   "use strict";
 
-  // ===== Elementos da UI
+ 
   const form = document.getElementById("task-form");
   const input = document.getElementById("task-input");
   const list = document.getElementById("task-list");
   const msg = document.getElementById("msg");
   const year = document.getElementById("year");
 
-  // ===== Estado e persistência
+  
   const STORAGE_KEY = "todo:tasks";
   let tasks = [];
 
@@ -26,7 +20,7 @@
       const data = raw ? JSON.parse(raw) : [];
       tasks = Array.isArray(data) ? data : [];
     } catch (_) {
-      tasks = []; // Em caso de erro de parse, recomeça limpo
+      tasks = []; 
     }
   }
 
@@ -34,7 +28,7 @@
     localStorage.setItem(STORAGE_KEY, JSON.stringify(tasks));
   }
 
-  // ===== Renderização
+ 
   function renderTasks() {
     list.innerHTML = "";
     const frag = document.createDocumentFragment();
@@ -44,7 +38,7 @@
       li.className = "task-item";
       li.dataset.id = String(task.id);
 
-      // Checkbox
+      
       const checkbox = document.createElement("input");
       checkbox.type = "checkbox";
       checkbox.className = "task-check";
@@ -52,7 +46,7 @@
       checkbox.id = `chk-${task.id}`;
       checkbox.setAttribute("aria-label", "Marcar como concluída");
 
-      // Texto (label associado ao checkbox)
+      
       const label = document.createElement("label");
       label.setAttribute("for", checkbox.id);
       const p = document.createElement("p");
@@ -60,7 +54,7 @@
       p.textContent = task.text;
       label.appendChild(p);
 
-      // Botão excluir
+     
       const delBtn = document.createElement("button");
       delBtn.type = "button";
       delBtn.className = "btn-del";
@@ -68,7 +62,7 @@
       delBtn.title = "Excluir tarefa";
       delBtn.setAttribute("aria-label", "Excluir tarefa");
 
-      // Monta item
+      
       li.appendChild(checkbox);
       li.appendChild(label);
       li.appendChild(delBtn);
@@ -78,7 +72,7 @@
     list.appendChild(frag);
   }
 
-  // ===== Operações principais
+  
   function addTask(text) {
     const trimmed = text.trim();
     if (!trimmed) {
@@ -86,7 +80,7 @@
       return;
     }
     const task = {
-      id: Date.now(), // id único simples
+      id: Date.now(), 
       text: trimmed,
       completed: false,
     };
@@ -95,7 +89,7 @@
     renderTasks();
     input.value = "";
     input.focus();
-    showMessage(""); // limpa mensagem
+    showMessage(""); 
   }
 
   function toggleTask(id) {
@@ -122,18 +116,18 @@
     }
   }
 
-  // ===== Helpers
+  
   function showMessage(text) {
     msg.textContent = text;
   }
 
-  // ===== Eventos
+  
   form.addEventListener("submit", (e) => {
     e.preventDefault();
     addTask(input.value);
   });
 
-  // Delegação de eventos para a lista (toggle e delete)
+  
   list.addEventListener("change", (e) => {
     const target = e.target;
     if (target && target.matches("input[type='checkbox'].task-check")) {
@@ -154,18 +148,14 @@
     }
   });
 
-  // ===== Inicialização
+  
   (function init() {
     if (year) year.textContent = new Date().getFullYear();
     loadTasks();
     renderTasks();
   })();
 
-  // ===== Exporta para inspeção/manual (opcional em dev) =====
-  // window._todo = { loadTasks, saveTasks, renderTasks, addTask, toggleTask, deleteTask };
-
-  // ===== Exige as funções mínimas nos nomes especificados =====
-  // (expondo no escopo global caso o avaliador execute via console)
+  
   window.loadTasks = loadTasks;
   window.saveTasks = saveTasks;
   window.renderTasks = renderTasks;
@@ -173,3 +163,4 @@
   window.toggleTask = toggleTask;
   window.deleteTask = deleteTask;
 })();
+
