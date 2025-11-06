@@ -1,6 +1,6 @@
 # To Do (HTML + CSS + JS + LocalStorage)
 
-Aplicativo **To Do **  usando **apenas HTML, CSS e JavaScript (ES6+)**, **sem bibliotecas**, **sem servidor** e com **persistência em LocalStorage**.
+Aplicativo To Do List usando **apenas HTML, CSS e JavaScript (ES6+)**, **sem bibliotecas**, **sem servidor** e com **persistência em LocalStorage**.
 
 
 ## Funcionalidades obrigatórias implementadas
@@ -12,7 +12,6 @@ Aplicativo **To Do **  usando **apenas HTML, CSS e JavaScript (ES6+)**, **sem bi
 
 ## Regras técnicas
 - Tecnologias: **HTML, CSS e JavaScript (ES6+)**.
-- Estrutura de arquivos mínima atendida:
   - `index.html`
   - `css/styles.css`
   - `js/app.js`
@@ -35,4 +34,5 @@ Aplicativo **To Do **  usando **apenas HTML, CSS e JavaScript (ES6+)**, **sem bi
 
 ## Observações
 - Sem frameworks, bundlers ou bibliotecas externas
+
 
