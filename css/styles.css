@@ -1,4 +1,4 @@
-/* ===== Reset mínimo e utilitários ===== */
+
 *,
 *::before,
 *::after {
@@ -15,8 +15,8 @@ body {
     "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji",
     "Segoe UI Symbol", "Noto Color Emoji", sans-serif;
   line-height: 1.5;
-  color: #1f2937; /* cinza-900 */
-  background: #f9fafb; /* cinza-50 */
+  color: #1f2937; 
+  background: #f9fafb; 
 }
 
 img,
@@ -37,12 +37,12 @@ svg {
   border: 0;
 }
 
-/* ===== Layout responsivo básico ===== */
+
 .app-header,
 .app-footer {
   padding: 1rem;
   text-align: center;
-  background: #111827; /* cinza-900 */
+  background: #111827; 
   color: #ffffff;
 }
 
@@ -52,7 +52,7 @@ svg {
   padding: 0 1rem;
 }
 
-/* ===== Form ===== */
+
 .task-form {
   display: grid;
   grid-template-columns: 1fr auto;
@@ -61,13 +61,13 @@ svg {
 
 #task-input {
   padding: 0.75rem 0.875rem;
-  border: 1px solid #d1d5db; /* cinza-300 */
+  border: 1px solid #d1d5db; 
   border-radius: 0.5rem;
   background: #ffffff;
 }
 
 #task-input:focus {
-  outline: 2px solid #3b82f6; /* azul-500 */
+  outline: 2px solid #3b82f6; 
   outline-offset: 2px;
 }
 
@@ -75,7 +75,7 @@ svg {
   padding: 0.75rem 1rem;
   border: none;
   border-radius: 0.5rem;
-  background: #3b82f6; /* azul-500 */
+  background: #3b82f6; 
   color: #ffffff;
   cursor: pointer;
 }
@@ -88,14 +88,14 @@ svg {
   filter: brightness(1.05);
 }
 
-/* Mensagens */
+
 .msg {
-  min-height: 1.25rem; /* reserva espaço para evitar salto de layout */
-  color: #b91c1c; /* vermelho-700 */
+  min-height: 1.25rem; 
+  color: #b91c1c; 
   margin: 0.25rem 0 1rem;
 }
 
-/* ===== Lista de tarefas ===== */
+
 .task-list {
   list-style: none;
   margin: 0;
@@ -111,7 +111,7 @@ svg {
   gap: 0.75rem;
   padding: 0.75rem 0.875rem;
   background: #ffffff;
-  border: 1px solid #e5e7eb; /* cinza-200 */
+  border: 1px solid #e5e7eb; 
   border-radius: 0.5rem;
 }
 
@@ -131,15 +131,15 @@ svg {
 }
 
 .task-text.completed {
-  color: #6b7280; /* cinza-500 */
+  color: #6b7280; 
   text-decoration: line-through;
 }
 
-/* Botão excluir */
+
 .btn-del {
-  border: 1px solid #ef4444; /* vermelho-500 */
-  background: #fee2e2; /* vermelho-100 */
-  color: #7f1d1d; /* vermelho-900 */
+  border: 1px solid #ef4444; 
+  background: #fee2e2; 
+  color: #7f1d1d; 
   border-radius: 0.375rem;
   padding: 0.35rem 0.5rem;
   cursor: pointer;
@@ -153,7 +153,7 @@ svg {
   outline-offset: 2px;
 }
 
-/* Ajustes para telas pequenas */
+
 @media (max-width: 420px) {
   .task-item {
     grid-template-columns: auto 1fr;
@@ -163,3 +163,4 @@ svg {
     justify-self: end;
   }
 }
+
